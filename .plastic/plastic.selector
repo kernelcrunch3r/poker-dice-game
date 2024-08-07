@@ -1,0 +1,4 @@
+repository "Dice Game@KCSE@cloud"
+  path "/"
+    br "/main"
+    co "/main"
