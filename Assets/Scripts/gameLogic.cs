@@ -53,7 +53,7 @@ public class gameLogic : MonoBehaviour
         if(turns>0 && turns<=3 && targetSpace.GetComponent<spaceScript>().empty) {
             // check if actually allowed to place chip in desired spot
             string[] possibilities = diceHand.GetComponent<diceHandScript>().currPositions;
-            if (possibilities.Contains(targetSpace.name)) {
+            if (possibilities.Contains(targetSpace.name) || possibilities.Contains("yahtzee")) {
                 spawnScript.PlaceChip(targetSpace, currPlayer);
 
                 targetSpace.GetComponent<spaceScript>().empty=false;
